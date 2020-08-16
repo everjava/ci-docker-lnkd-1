@@ -11,7 +11,7 @@ client.connect(config.DB, { useNewUrlParser: true }, (err, db) => {
         console.log('database is not connected')
     }
     else {
-        console.log('connected!!')
+        console.log('database is connected \o/ !!')
     }
 });
 
