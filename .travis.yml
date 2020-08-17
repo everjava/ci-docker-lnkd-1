@@ -1,7 +1,6 @@
 sudo: required
 services:
  - docker
-
- script:
+script:
  - docker build -t everjava/node .
  - docker images everjava/node
