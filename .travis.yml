@@ -1,6 +1,16 @@
 sudo: required
 services:
  - docker
+
 script:
  - docker build -t everjava/node .
  - docker images everjava/node
+
+before_deploy:
+  - docker login -u everjava -p evers0n1975
+
+deploy:
+  provider: script
+  script: docker push everjava/node
+  on:
+    branch: master
